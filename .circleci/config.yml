@@ -6,16 +6,16 @@ orbs:
 
 jobs:
     build-and-test:
-    docker:
-        - image: cimg/python:3.10.2
-    steps:
-        - checkout
-        - run:
-            name: Install Dependencies
-            command: make install
-        - run:
-            name: Run Lint
-            command: make lint
+        docker:
+            - image: cimg/python:3.10.2
+        steps:
+            - checkout
+            - run:
+                name: Install Dependencies
+                command: make install
+            - run:
+                name: Run Lint
+                command: make lint
 
 workflows:
     sample: 
